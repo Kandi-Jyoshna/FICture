@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+       body{
+           background-image: url('{% static "images/bg1.jpg" %}');
+       }
+       .c3{
+            margin-top: 50px;
+            /* padding-top:100px; */
+            padding-left:700px;
+       }
+       .c2{
+            padding-top:10px;
+            padding-left:500px;
+       }
+       .c4{
+            /* padding-top:75px; */
+            margin-top: 0px;
+            padding-left:700px;
+       }
+      </style>
+    </head>
+    <body>
+        <div class="c2">
+       <img src="{% static 'images/logo.png' %}">
+        </div>
+       <a href="{% url 'login' %}">
+           <div class="c3">
+               <img src="{% static 'images/login.png' %}" height="60px" width="200px">
+            </div>
+        </a>
+        <a href="{% url 'register' %}">
+            <div class="c4">
+                <img src="{% static 'images/registerb.png' %}" height="50px" width="200px">
+             </div>
+         </a>
+    </body>
+</html>
+
+
+

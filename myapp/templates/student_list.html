@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Displaying model data{% endblock title %}
+
+{% block content %}
+    <h1>All students in Database</h1>
+    <ul>
+        {% for i in student_list %}
+            <li>{{i.name}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

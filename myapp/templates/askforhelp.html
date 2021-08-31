@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact V4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %} "/>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.topnav-right {
+  float: right;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:palevioletred;
+  padding: 15px 15px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color:cyan;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  background-color:blanchedalmond;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="{% url 'post' %}">Post</a>
+    <a href="{% url 'viewprevposts' %}">View previous Posts</a>
+    <a href="{% url 'askforhelp' %}">Ask for help</a>
+    <a href="{% url 'faqs' %}">FAQ's</a>
+  <div class="topnav-right">
+    <a href="http://localhost:8000/">Log out</a>
+  </div>
+</div>
+
+
+<div class="container-contact100">
+  <div class="wrap-contact100">
+      <form class="contact100-form validate-form" action="http://localhost:8000/successforhelp/" method="POST">
+          {% csrf_token %}
+          <div class="wrap-input100 validate-input" data-validate="Answer is required">
+              <span class="label-input100"><strong>Your Name</strong></span>
+              <input class="input100" type="text" name="name1" placeholder="Enter your Answer">
+              <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input" data-validate="Answer is required">
+            <span class="label-input100"><strong>Roll No</strong></span>
+            <input class="input100" type="text" name="roll1" placeholder="Enter your Answer">
+            <span class="focus-input100"></span>
+        </div>
+          <div class="wrap-input100 validate-input" data-validate="Answer is required">
+              <span class="label-input100"><strong>Name of the object lost</strong></span>
+                      <input class="input100" type="text" name="objectname1" placeholder="Enter your Answer">
+                      <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input" data-validate="Answer is required">
+            <span class="label-input100"><strong>Provide your Contact Details</strong></span>
+                    <input class="input100" type="text" name="contact1" placeholder="Enter your Answer">
+                    <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input" data-validate="Answer is required">
+            <span class="label-input100"><strong>Description</strong></span>
+                  <input class="input100" type="text" name="description1" placeholder="Enter your Answer">
+                  <span class="focus-input100"></span>
+          </div>
+
+          <div class="container-contact100-form-btn">
+              <div class="wrap-contact100-form-btn">
+                  <div class="contact100-form-bgbtn"></div>
+                  <button class="contact100-form-btn">
+               <span>
+                Submit
+                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                </span>
+                  </button>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+
+<script>
+  $(".selection-2").select2({
+      minimumResultsForSearch: 20,
+      dropdownParent: $('#dropDownSelect1')
+  });
+</script>
+
+<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>

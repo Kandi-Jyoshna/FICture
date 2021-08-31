@@ -1,0 +1,43 @@
+.main
+{
+	display: flex;
+  	justify-content: space-between;
+  	flex-direction: column;
+  	align-items: center;
+}
+.main>*
+{
+	margin:30px;
+}
+.fl
+{
+	display: flex;
+	flex-direction: column;
+}
+.fl>*
+{
+	margin: 10px;
+}
+.myButton {
+	box-shadow: 0px 2px 0px 0px #9fb4f2;
+	background-color:#7892c2;
+	border-radius:28px;
+	border:1px solid #bfc5d9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:11px 31px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#476e9e;
+	text-decoration:none;
+	color:white;
+}
+.myButton:active {
+	position:relative;
+	text-decoration:none;
+	top:1px;
+}
